@@ -1,2 +1,2 @@
 # miniBottleToDo
-Мини проект на фреймворке 
+Мини To-Do List проект на фреймворке Bottle
