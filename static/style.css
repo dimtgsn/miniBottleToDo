@@ -21,7 +21,17 @@ body{
 }
 .main-btn{
     color: #fff;
-    background-color: #B47AEA;
+    background-color: rgba(180,122,234,.7);
     border-radius: 15px;
     border: 0;
 }
+.main-btn:hover{
+    background-color: rgba(180,122,234,1);
+}
+.app-header{
+    font-size: 60px;
+    font-weight: bold;
+    color: #5E5E5E;
+    line-height: 77px;
+}
+

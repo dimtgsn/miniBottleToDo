@@ -8,15 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/style.css">
-    <title>To-Do</title>
+    <title>To-Do List</title>
 </head>
 <body>
     <div class="container h-100">
         <div class="row align-items-center h-100">
             <div class="col-4 offset-4 text-center">
-                <h1 class="main-header">To-Do</h1>
+                <h1 class="main-header">To-Do List</h1>
                 <p class="main-description">Manage You Task Checklist Easily</p>
-                <button class="main-btn btn btn-primary" type="button">Lets Start!</button>
+                <a class="main-btn btn btn-primary" href="ToDoList" type="button">Lets Start!</a>
             </div>
         </div>
     </div>
