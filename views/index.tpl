@@ -14,7 +14,7 @@
     <div class="container h-100">
         <div class="row align-items-center h-100">
             <div class="col-4 offset-4 text-center">
-                <h1 class="main-header">To-Do List</h1>
+                <h1 class="main-header">To&nbsp-&nbspDo List</h1>
                 <p class="main-description">Manage You Task Checklist Easily</p>
                 <a class="main-btn btn btn-primary" href="ToDoList" type="button">Lets Start!</a>
             </div>

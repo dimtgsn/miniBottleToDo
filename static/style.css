@@ -6,14 +6,14 @@ html,body{
 body{
     font-family: 'Inter', sans-serif;
 }
+/*Main page*/
 .main-header{
     font-size: 72px;
     font-weight: bold;
     color: #5E5E5E;
     line-height: 87px;
 }
-.main-btn,
-.main-description{
+.main-btn{
     font-weight: bold;
     font-size: 24px;
     color: #5E5E5E;
@@ -28,10 +28,110 @@ body{
 .main-btn:hover{
     background-color: rgba(180,122,234,1);
 }
+/*App page*/
 .app-header{
     font-size: 60px;
     font-weight: bold;
     color: #5E5E5E;
     line-height: 77px;
 }
-
+.main-description{
+    font-weight: 500;
+    font-size: 24px;
+    color: #000;
+    line-height: 29px;
+    text-align: left;
+    margin-bottom: 17px;
+}
+.to-do-list{
+    display: inline-block;
+    list-style-type: none;
+}
+.custom-checkbox>input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom-checkbox>span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.custom-checkbox>span::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #1E9CEA;
+  border-radius: 0.25em;
+  margin-right: 0.6em;
+  margin-left: 0.4em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+  border-color: #1E9CEA;
+}
+.custom-checkbox>input:not(:disabled):active+span::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+.custom-checkbox>input:focus:not(:checked)+span::before {
+  border-color: #80bdff;
+}
+.custom-checkbox>input:checked+span::before {
+  border-color: #1E9CEA;
+  background-color: #1E9CEA;
+  background-image: url("check.svg");
+}
+.custom-checkbox>input:disabled+span::before {
+  background-color: #e9ecef;
+}
+.task-remove{
+    color: #5E5E5E;
+    text-decoration: none;
+    cursor: pointer;
+}
+.task-remove img{
+    vertical-align: top;
+    transform: scale(1.2);
+}
+.completed{
+    text-decoration: line-through;
+}
+.add{
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: #B47AEA;
+    color: #fff;
+    vertical-align: baseline;
+    margin-right: 0.4em;
+    border-color: #B47AEA;
+    padding: 0;
+}
+.form-control{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 24px;
+    color: #B47AEA;
+    width: 90%;
+    line-height: 29px;
+    border: 1px #B47AEA solid;
+    font-family: 'Inter', sans-serif;
+}
+.form-control:focus{
+    color: #5E5E5E;
+}
+.form-control:active{
+    color: #B47AEA;
+}
+.add:hover{
+    color: #fff;
+    background-color: #a63ef6;
+}

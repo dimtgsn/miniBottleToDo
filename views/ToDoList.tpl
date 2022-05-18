@@ -13,22 +13,34 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="app-header">To-Do List</h1>
+            <div class="col-12 text-center mb-5">
+                <h1 class="app-header">To&nbsp-&nbspDo List</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 text-center">
-                <ul class='to-do-list text-center'>
-                    % for task in tasks:
-                        <li>
-                            <input type="checkbox" class="main-description" id="checkbox">{{task}}
-                            <a class='task-remove' href='#'>X</a>
+            <div class="col-12 text-left">
+                <ul class='to-do-list'>
+                    % for task in enumerate(tasks):
+                        <li class='main-description'>
+                            <a class='task-remove' href='#'>
+                                <img src='../static/trashCan.svg' alt="Delete">
+                            </a>
+
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span>{{task[1]}}</span>
+                            </label>
                         </li>
                     % end
                 </ul>
+                <form id="todo-add" class="mt-3">
+                    <button class="add btn" type="submit">+</button>
+                    <input type="text" placeholder="Add New Task" class="form-control"/>
+                </form>
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src='../static/script.js'></script>
 </body>
 </html>
