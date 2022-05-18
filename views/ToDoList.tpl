@@ -14,28 +14,42 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center mb-5">
-                <h1 class="app-header">To&nbsp-&nbspDo List</h1>
+                <h1 class="app-header">ToDo List</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-12 text-left">
                 <ul class='to-do-list'>
-                    % for task in enumerate(tasks):
-                        <li class='main-description'>
-                            <a class='task-remove' href='#'>
-                                <img src='../static/trashCan.svg' alt="Delete">
-                            </a>
+                    % for task in tasks:
+                        % if task.is_complete:
+                            <li class='main-description'>
+                                <a class='task-remove' href='api/delete/{{task.uid}}'>
+                                    <img src='../static/trashCan.svg' alt="Delete">
+                                </a>
 
-                            <label class="custom-checkbox">
-                                <input type="checkbox">
-                                <span>{{task[1]}}</span>
-                            </label>
-                        </li>
+                                <label class="custom-checkbox">
+                                    <input data-uid={{task.uid}} type="checkbox" disabled="true">
+                                    <span>{{task}}</span>
+                                </label>
+                            </li>
+                        % else:
+                            <li class='main-description'>
+                                <a class='task-remove' href='api/delete/{{task.uid}}'>
+                                    <img src='../static/trashCan.svg' alt="Delete">
+                                </a>
+
+                                <label class="custom-checkbox">
+                                    <input data-uid={{task.uid}} type="checkbox">
+                                    <span>{{task}}</span>
+                                </label>
+                            </li>
+                        % end
                     % end
                 </ul>
-                <form id="todo-add" class="mt-3">
+                <form action='/ToDoList/add-task' method='post' id="todo-add" class="mt-3">
                     <button class="add btn" type="submit">+</button>
-                    <input type="text" placeholder="Add New Task" class="form-control"/>
+                    <h2 class='desc-btn'>Add New Task</h2>
+                    <input id='new-todo-desc' type="text" placeholder="Add New Task" class="form-control" name='description'/>
                 </form>
             </div>
         </div>

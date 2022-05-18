@@ -104,9 +104,9 @@ body{
     text-decoration: line-through;
 }
 .add{
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
     border-radius: 50%;
     background-color: #B47AEA;
     color: #fff;
@@ -116,14 +116,17 @@ body{
     padding: 0;
 }
 .form-control{
-    display: inline-block;
+    display: none;
     font-weight: 700;
     font-size: 24px;
     color: #B47AEA;
-    width: 90%;
+    width: 67%;
+    vertical-align: baseline;
     line-height: 29px;
     border: 1px #B47AEA solid;
     font-family: 'Inter', sans-serif;
+    opacity: 0;
+    transition: all 1s ease-in-out;
 }
 .form-control:focus{
     color: #5E5E5E;
@@ -134,4 +137,15 @@ body{
 .add:hover{
     color: #fff;
     background-color: #a63ef6;
+}
+.desc-btn{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 24px;
+    color: #B47AEA;
+    width: 67%;
+    line-height: 29px;
+    font-family: 'Inter', sans-serif;
+    transition: opacity 1s ease-in-out;
+    cursor: pointer;
 }
