@@ -21,7 +21,7 @@
             <div class="col-12 text-left">
                 <ul class='to-do-list'>
                     % for task in tasks:
-                        % if task.is_complete:
+                        % if task.is_completed:
                             <li class='main-description'>
                                 <a class='task-remove' href='api/delete/{{task.uid}}'>
                                     <img src='../static/trashCan.svg' alt="Delete">
