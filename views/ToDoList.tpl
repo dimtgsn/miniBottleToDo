@@ -28,8 +28,8 @@
                                 </a>
 
                                 <label class="custom-checkbox">
-                                    <input data-uid={{task.uid}} type="checkbox" disabled="true">
-                                    <span>{{task}}</span>
+                                    <input type="checkbox" disabled="true">
+                                    <span class="completed">{{task}}</span>
                                 </label>
                             </li>
                         % else:
@@ -39,14 +39,23 @@
                                 </a>
 
                                 <label class="custom-checkbox">
-                                    <input data-uid={{task.uid}} type="checkbox">
+                                    <a id="com" href='api/complete/{{task.uid}}'></a>
+                                    <input class="custom-checkbox-input" data-uid={{task.uid}} type="checkbox" >
                                     <span>{{task}}</span>
                                 </label>
                             </li>
                         % end
                     % end
                 </ul>
-                <form action='/ToDoList/add-task' method='post' id="todo-add" class="mt-3">
+                <div class="col-12 mt-1 ps-4 ms-2">
+                    % if total_tasks > 0:
+                        <h2 class="tasks-count">Всего задач - <span>{{total_tasks}}</span></h2>
+                    % end
+                    % if incomplete > 0:
+                        <h2 class="tasks-count">Невыполненных задач - <span>{{incomplete}}</span></h2>
+                    % end
+                </div>
+                <form action='/ToDoList/add-task' method='post' id="todo-add" class="mt-5">
                     <button class="add btn" type="submit">+</button>
                     <h2 class='desc-btn'>Add New Task</h2>
                     <input id='new-todo-desc' type="text" placeholder="Add New Task" class="form-control" name='description'/>

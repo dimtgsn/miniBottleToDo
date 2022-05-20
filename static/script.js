@@ -1,17 +1,16 @@
 $('document').ready(function () {
-    $('.task-remove').on('click', function () {
+    $(document).on('click', '.task-remove', function () {
         $(this).parent().remove();
     });
-    $('.custom-checkbox').on('click', function () {
-        $(this).addClass('completed');
-        uid = $(this).find("input").attr('data-uid');
-        $.get("/api/complete/" + uid);
-        setTimeout(() => $(this).find("input").attr('disabled', true), 1000);
+    $(document).on('click', '.custom-checkbox-input', function () {
+        $(this).next().addClass('completed');
+        setTimeout(() => $(this).attr('disabled', true), 1000);
+        //uid = $(this).attr('data-uid');
+        document.querySelector("#com").click();
+        //$.get("/api/complete/" + uid);
     });
-    $('.desc-btn').on('click', function () {
-        // $(this).hide(1000, function(){
+    $(document).on('click', '.desc-btn', function () {
         $(this).css({'display': 'none', 'opacity': '0'});
-        // });
         $('.form-control').show(10, function(){
            $('.form-control').css({'display': 'inline-block', 'opacity': '1', 'transition': 'all 1s ease-in-out'});
         });
