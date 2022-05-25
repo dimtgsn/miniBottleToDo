@@ -9,4 +9,4 @@
 
 Используемый стек: 
   =
-  + Bottle, SQLite, SQLAlchemy, Bootstrap, Jquery, CSS, HTML
+  + Bottle, PostgreSQL, SQLAlchemy, Bootstrap, Jquery, CSS, HTML
