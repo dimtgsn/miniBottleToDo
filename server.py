@@ -1,3 +1,4 @@
+import os
 from bottle import route, view, redirect, static_file, request, run
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -56,6 +57,7 @@ def api_complete(uid):
     return redirect("/ToDoList")
 
 
-run(
-    port=8000, host='localhost'
-)
+if os.environ.get('APP_LOCATION') == 'heroku':
+    run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+else:
+    run(host='localhost', port=8000, debug=True)
