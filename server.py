@@ -3,8 +3,10 @@ from bottle import route, view, redirect, static_file, request, run
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from db import ToDoItem, Base
+import psycopg2
 
-engine = create_engine("sqlite:///tasks.db")
+
+engine = create_engine("postgresql+psycopg2://postgres:171512@localhost/tasks")
 Session = sessionmaker(bind=engine)
 s = Session()
 

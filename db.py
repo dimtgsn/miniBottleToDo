@@ -1,8 +1,17 @@
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Boolean
+import psycopg2
 
 
 Base = declarative_base()
+
+DATABASE = {
+    'host': 'localhost',
+    'port': '5432',
+    'username': 'postgres',
+    'pass': '171512',
+    'database': 'todolist'
+}
 
 
 class ToDoItem(Base):
