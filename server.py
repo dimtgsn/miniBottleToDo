@@ -2,11 +2,12 @@ import os
 from bottle import route, view, redirect, static_file, request, run
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from db import ToDoItem, Base
+from db import ToDoItem, Base, DATABASE
 import psycopg2
 
 
-engine = create_engine("postgresql+psycopg2://postgres:171512@localhost/tasks")
+engine = create_engine(f"postgresql+psycopg2://{DATABASE['username']}:{DATABASE['pass']}@{DATABASE['host']}/{DATABASE['database']}", echo=True)
+engine.connect()
 Session = sessionmaker(bind=engine)
 s = Session()
 
