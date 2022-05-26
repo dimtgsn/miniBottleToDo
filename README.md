@@ -10,3 +10,5 @@
 Используемый стек: 
   =
   + Bottle, PostgreSQL, SQLAlchemy, Bootstrap, Jquery, CSS, HTML
+
+Под конец задеплоим мини проект на heroku
