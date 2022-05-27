@@ -5,7 +5,13 @@ import psycopg2
 
 
 if os.environ.get('APP_LOCATION') == 'heroku':
-    DATABASE_URI = 'postgres://ohlhfraksogfbn:062947cf65f0bdff74c5e167ed22425c04ca909f1be5ba686a498bdca5105b5c@ec2-3-248-121-12.eu-west-1.compute.amazonaws.com:5432/deuai0l41nr67p'
+    DATABASE = {
+        'host': 'ec2-3-248-121-12.eu-west-1.compute.amazonaws.com',
+        'port': '5432',
+        'username': 'ohlhfraksogfbn',
+        'pass': '062947cf65f0bdff74c5e167ed22425c04ca909f1be5ba686a498bdca5105b5c',
+        'database': 'deuai0l41nr67p'
+    }
 else:
     DATABASE = {
         'host': 'localhost',
