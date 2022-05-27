@@ -1,0 +1,13 @@
+{
+  "name": "Start on Heroku: Python",
+  "description": "This app does one little thing, and does it well.",
+  "image": "heroku/python",
+  "repository": "https://github.com/dmitry1721/miniBottleToDo/tree/master-psql",
+  "keywords": ["python", "bottle", "postgresql" ],
+  "env": {
+    "APP_LOCATION": {
+      "description": "Flag to tell the app we're running on cloud.",
+      "value": "heroku"
+    }
+  }
+}
