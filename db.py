@@ -4,14 +4,14 @@ from sqlalchemy import Column, Integer, String, Boolean
 import psycopg2
 
 
-DATABASE = {
-    'host': 'ec2-3-248-121-12.eu-west-1.compute.amazonaws.com',
-    'port': '5432',
-    'username': 'ohlhfraksogfbn',
-    'pass': '062947cf65f0bdff74c5e167ed22425c04ca909f1be5ba686a498bdca5105b5c',
-    'database': 'deuai0l41nr67p'
-}
-
+# DATABASE = {
+#     'host': 'ec2-3-248-121-12.eu-west-1.compute.amazonaws.com',
+#     'port': '5432',
+#     'username': 'ohlhfraksogfbn',
+#     'pass': '062947cf65f0bdff74c5e167ed22425c04ca909f1be5ba686a498bdca5105b5c',
+#     'database': 'deuai0l41nr67p'
+# }
+DATABASE_URL = "postgresql+psycopg2://" + os.environ['DATABASE_URL'].split("://")[1]
 # DATABASE = {
 #     'host': 'localhost',
 #     'port': '5432',

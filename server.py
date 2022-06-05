@@ -6,7 +6,7 @@ from db import *
 import psycopg2
 
 
-engine = create_engine(f"postgresql+psycopg2://{DATABASE['username']}:{DATABASE['pass']}@{DATABASE['host']}/{DATABASE['database']}", echo=True)
+engine = create_engine(DATABASE_URL, echo=True)
 engine.connect()
 Session = sessionmaker(bind=engine)
 s = Session()
