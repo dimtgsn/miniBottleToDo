@@ -55,7 +55,7 @@
                         <h2 class="tasks-count">Невыполненных задач - <span>{{incomplete}}</span></h2>
                     % end
                 </div>
-                <form action='/ToDoList/add-task' method='post' id="todo-add" class="mt-5">
+                <form action='/ToDoList/add-task' method='post' id="todo-add" class="mt-5 ps-4 ms-2">
                     <button class="add btn" type="submit">+</button>
                     <h2 class='desc-btn'>Add New Task</h2>
                     <input id='new-todo-desc' type="text" placeholder="Add New Task" class="form-control" name='description'/>

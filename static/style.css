@@ -11,13 +11,11 @@ body{
     font-size: 72px;
     font-weight: bold;
     color: #5E5E5E;
-    line-height: 87px;
 }
 .main-btn{
     font-weight: bold;
     font-size: 24px;
     color: #5E5E5E;
-    line-height: 29px;
 }
 .main-btn{
     color: #fff;
@@ -33,14 +31,12 @@ body{
     font-size: 60px;
     font-weight: bold;
     color: #5E5E5E;
-    line-height: 77px;
+    margin-top: 20px;
 }
 .main-description{
     font-weight: 500;
     font-size: 24px;
-    color: #000;
-    line-height: 29px;
-    text-align: left;
+    color: #5e5e5e;
     margin-bottom: 17px;
 }
 .to-do-list{
@@ -158,4 +154,16 @@ body{
 }
 .tasks-count span{
     color: #5E5E5E;
+}
+
+@media (max-width: 768px) {
+    .main-header{
+        font-size: 57px;
+    }
+    .main-btn,
+    .main-description,
+    .tasks-count,
+    .desc-btn{
+        font-size: 18px;
+    }
 }
