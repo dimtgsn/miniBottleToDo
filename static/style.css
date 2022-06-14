@@ -164,6 +164,11 @@ body{
     .main-description,
     .tasks-count,
     .desc-btn{
-        font-size: 18px;
+        font-size: 16px;
+    }
+    .add{
+        width: 47px;
+        height: 47px;
+        font-size: 20px;
     }
 }
