@@ -171,4 +171,8 @@ body{
         height: 47px;
         font-size: 20px;
     }
+    .task-remove img{
+        vertical-align: bottom;
+        transform: scale(1);
+    }
 }
